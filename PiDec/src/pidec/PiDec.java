@@ -1,21 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pidec;
 
-/**
- *
- * @author brandon
- */
-public class PiDec {
+import java.util.Scanner;
+import java.math.BigDecimal;
 
-    /**
-     * @param args the command line arguments
-     */
+public class PiDec {
+    //Find PI to the Nth Digit
+    //Enter a number and have the program generate PI up to that many decimal places.
+    //Keep a limit to how far the program will go.
+
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        BigDecimal seven = new BigDecimal(7.0);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter the decimal places to which you'd like PI printed: ");
+        int i = input.nextInt();
+        BigDecimal pi = new BigDecimal(22.0).divide(seven, i, BigDecimal.ROUND_UP);
+
+        if (i > 100 || i < 0) {
+            System.out.println("Decimal place out of bounds!");
+        } else {
+            System.out.println(pi);
+        }
     }
-    
 }
