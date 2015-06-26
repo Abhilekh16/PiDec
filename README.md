@@ -1,2 +1,2 @@
 # PiDec
-Find PI to the Nth Digit from https://github.com/karan/Projects
+Find PI to the Nth Digit in Java from https://github.com/karan/Projects
